@@ -1,12 +1,18 @@
 
 exports.min = function min (array) {
-  return 0;
+    return (array === undefined || array.length === 0) ? 0 : Math.min.apply(null, array);
 }
 
 exports.max = function max (array) {
-  return 0;
+    return (array === undefined || array.length === 0) ? 0 : Math.max.apply(null, array);
 }
 
 exports.avg = function avg (array) {
-  return 0;
+    if(array === undefined || array.length === 0)
+        return 0;
+    let sum = 0;
+    for(let i of array) {
+        sum += i;
+    }
+    return sum / array.length;
 }
